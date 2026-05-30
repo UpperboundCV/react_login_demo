@@ -5,6 +5,7 @@ import ProductList from "../pages/ProductList";
 import ProductDetail from "../pages/ProductDetail";
 import Cart from "../pages/Cart";
 import { getProducts, getProductById } from "../api/products";
+import LoginPage from "../pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,12 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <ProductList />,
-        loader: getProducts
+        loader: getProducts,
       },
       {
         path: "product/:id",
         element: <ProductDetail />,
-        loader: getProductById
+        loader: getProductById,
       },
       {
         path: "cart",
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         element: <ErrorPage />,
       },
     ],
+  },
+  ,
+  {
+    path: "login",
+    element: <LoginPage />,
   },
 ]);
 
