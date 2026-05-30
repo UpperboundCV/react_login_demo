@@ -37,6 +37,6 @@ const router = createBrowserRouter([
     path: "login",
     element: <LoginPage />,
   },
-]);
+],{basename: "/react_login_demo/"});
 
 export default router;
