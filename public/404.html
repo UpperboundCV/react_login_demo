@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      var l = window.location;
+      sessionStorage.redirect = l.pathname + l.search + l.hash;
+      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/react_login_demo/');
+    </script>
+  </head>
+  <body></body>
+</html>
